@@ -1,0 +1,57 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<div class="text-center">
+    <h1 class="display-4">Food</h1>
+    <p>Learn about food </p>
+</div>
+
+@{
+    var foodlist = new [] {
+        new {
+           dish_name = "dhokda",
+            type = "gujarati",
+            test = "salty"
+        },
+        new {
+            dish_name = "bhajipau",
+            type = "common",
+            test = "spicy"
+        }, 
+        new {
+            dish_name = "thepla",
+            type = "gujarati",
+            test = "spicy"
+        },
+        new {
+           dish_name = "kaju-katri",
+            type = "sweet",
+            test = "sweet"
+        },
+        new {
+            dish_name = "maisur",
+            type = "maisur",
+            test = "sweet"
+        }
+    };
+}
+
+@for (var i = 0; i < foodlist.Length; i++)
+{
+    var food = foodlist[i];
+    <text>food name: <b> @food.dish_name </b> <br></text>
+    <text>food type: @food.type <br></text>
+    <text>food test: @food.test<br></text>
+}
+
+
+
+
+
+
+
+
+
+
